@@ -28,6 +28,10 @@ body {
   line-height: 1.55;
 }
 
+section {
+  scroll-margin-top: 96px;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -52,7 +56,8 @@ a {
 }
 
 .brand img {
-  width: 118px;
+  width: 150px;
+  max-height: 74px;
   height: auto;
 }
 
@@ -349,6 +354,109 @@ h3 {
   font-weight: 800;
 }
 
+.service-catalog {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.service-catalog article {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(243, 232, 226, 0.68));
+  padding: 28px;
+}
+
+.service-catalog h3 {
+  max-width: 520px;
+}
+
+.service-catalog ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-catalog li {
+  border: 1px solid rgba(122, 64, 61, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding: 8px 12px;
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(28px, 6vw, 72px);
+  align-items: start;
+}
+
+.reviews-summary {
+  max-width: 520px;
+}
+
+.rating-block {
+  display: grid;
+  gap: 4px;
+  margin: 28px 0;
+  padding: 24px;
+  border: 1px solid rgba(122, 64, 61, 0.14);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.rating-block strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4.6rem;
+  line-height: 0.9;
+  font-weight: 500;
+}
+
+.rating-block span,
+.review-grid span {
+  color: #d6a646;
+  letter-spacing: 0;
+}
+
+.rating-block small {
+  color: var(--muted);
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.review-grid article {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: space-between;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(77, 50, 43, 0.06);
+}
+
+.review-grid p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.review-grid strong {
+  color: var(--ink);
+}
+
 .experience {
   display: grid;
   grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1fr);
@@ -474,9 +582,8 @@ select {
 }
 
 .footer img {
-  width: 128px;
+  width: 178px;
   margin-bottom: 12px;
-  filter: brightness(1.12);
 }
 
 .footer p,
@@ -525,7 +632,8 @@ select {
   .hero,
   .experience,
   .consult,
-  .section-heading {
+  .section-heading,
+  .reviews {
     grid-template-columns: 1fr;
   }
 
@@ -534,7 +642,9 @@ select {
   }
 
   .treatment-grid,
-  .intro-grid {
+  .intro-grid,
+  .service-catalog,
+  .review-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -573,6 +683,8 @@ select {
   .treatment-grid,
   .intro-grid,
   .team-grid,
+  .service-catalog,
+  .review-grid,
   .footer {
     grid-template-columns: 1fr;
   }
