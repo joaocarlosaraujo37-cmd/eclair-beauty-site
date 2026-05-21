@@ -219,6 +219,7 @@ h3 {
 .section-band,
 .treatments,
 .experience,
+.location,
 .consult,
 .faq {
   padding: clamp(64px, 8vw, 116px) clamp(20px, 5vw, 72px);
@@ -623,6 +624,115 @@ h3 {
   color: var(--ink);
 }
 
+.location {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1fr);
+  gap: clamp(28px, 6vw, 78px);
+  align-items: start;
+  background: var(--paper);
+}
+
+.location-copy {
+  position: sticky;
+  top: 112px;
+  max-width: 620px;
+}
+
+.location-copy p {
+  color: var(--muted);
+}
+
+.location-steps {
+  display: grid;
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.location-steps div {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  padding: 18px;
+}
+
+.location-steps span {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--rose-dark);
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.location-steps strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.location-steps p {
+  margin: 0;
+}
+
+.location-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.location-media {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(180px, 0.72fr);
+  gap: 16px;
+}
+
+.location-facade,
+.location-entrance {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.location-facade img {
+  width: 100%;
+  aspect-ratio: 1.18 / 1;
+  object-fit: cover;
+  object-position: center 42%;
+  filter: saturate(0.94) contrast(0.98) brightness(1.02);
+}
+
+.location-entrance img {
+  width: 100%;
+  aspect-ratio: 0.72 / 1;
+  object-fit: cover;
+  object-position: center center;
+  filter: saturate(0.94) contrast(0.98) brightness(1.02);
+}
+
+.location-facade figcaption,
+.location-entrance figcaption {
+  padding: 14px 16px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.location-map {
+  grid-column: 1 / -1;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  min-height: 320px;
+}
+
+.location-map iframe {
+  display: block;
+  width: 100%;
+  height: 360px;
+  border: 0;
+}
+
 .consult {
   display: grid;
   grid-template-columns: minmax(0, 0.85fr) minmax(320px, 0.65fr);
@@ -726,6 +836,7 @@ select {
 
   .hero,
   .experience,
+  .location,
   .consult,
   .section-heading,
   .reviews {
@@ -764,6 +875,7 @@ select {
   .section-band,
   .treatments,
   .experience,
+  .location,
   .consult,
   .faq {
     padding-left: 16px;
@@ -782,6 +894,26 @@ select {
   .review-grid,
   .footer {
     grid-template-columns: 1fr;
+  }
+
+  .location-copy {
+    position: static;
+  }
+
+  .location-actions .button {
+    width: 100%;
+  }
+
+  .location-media {
+    grid-template-columns: 1fr;
+  }
+
+  .location-entrance img {
+    aspect-ratio: 1.12 / 1;
+  }
+
+  .location-map iframe {
+    height: 300px;
   }
 
   .team-card {
