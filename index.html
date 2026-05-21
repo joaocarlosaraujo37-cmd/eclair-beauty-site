@@ -15,7 +15,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/clinica-recepcao.jpg" />
-    <link rel="stylesheet" href="styles.css?v=20260520-2" />
+    <link rel="stylesheet" href="styles.css?v=20260520-3" />
   </head>
   <body>
     <header class="site-header" data-header>
@@ -103,74 +103,19 @@
           <button class="filter is-active" type="button" data-filter="todos">Todos</button>
           <button class="filter" type="button" data-filter="facial">Facial</button>
           <button class="filter" type="button" data-filter="corporal">Corporal</button>
-          <button class="filter" type="button" data-filter="injetaveis">Injetáveis</button>
-          <button class="filter" type="button" data-filter="tecnologia">Tecnologia</button>
-        </div>
-
-        <div class="treatment-grid">
-          <article class="treatment-card" data-category="injetaveis facial">
-            <img src="assets/procedimento-facial.jpg" alt="Ambiente de atendimento estético" />
-            <div>
-              <p>Expressão e contorno</p>
-              <h3>Botox e preenchimento</h3>
-              <span>Suavização de linhas, equilíbrio facial e resultado natural.</span>
-              <button type="button" data-procedure="Botox e preenchimento">Tenho interesse</button>
-            </div>
-          </article>
-          <article class="treatment-card" data-category="corporal tecnologia">
-            <img src="assets/sala-clinica.jpg" alt="Sala de atendimento da Eclair Beauty" />
-            <div>
-              <p>Corpo</p>
-              <h3>Gordura localizada</h3>
-              <span>Protocolos com criolipólise, enzimas, ultracavitação e tecnologias combinadas.</span>
-              <button type="button" data-procedure="Gordura localizada">Tenho interesse</button>
-            </div>
-          </article>
-          <article class="treatment-card" data-category="facial tecnologia">
-            <img src="assets/sala-clinica.jpg" alt="Sala da clínica Eclair Beauty" />
-            <div>
-              <p>Pele</p>
-              <h3>Limpeza, manchas e textura</h3>
-              <span>Limpeza de pele, peelings, LED, microagulhamento, Lavieen e skinbooster.</span>
-              <button type="button" data-procedure="Tratamentos para pele">Tenho interesse</button>
-            </div>
-          </article>
-          <article class="treatment-card" data-category="corporal">
-            <img src="assets/clinica-recepcao.jpg" alt="Recepção da Eclair Beauty" />
-            <div>
-              <p>Modelagem</p>
-              <h3>Drenagem e massagem modeladora</h3>
-              <span>Cuidado corporal para leveza, contorno, bem-estar e acompanhamento de protocolos.</span>
-              <button type="button" data-procedure="Drenagem e massagem modeladora">Tenho interesse</button>
-            </div>
-          </article>
-          <article class="treatment-card" data-category="corporal tecnologia">
-            <img src="assets/procedimento-facial.jpg" alt="Atendimento personalizado na Eclair Beauty" />
-            <div>
-              <p>Firmeza</p>
-              <h3>Flacidez e estrias</h3>
-              <span>Protocolos para estimular qualidade da pele, firmeza e melhora progressiva de textura.</span>
-              <button type="button" data-procedure="Flacidez e estrias">Tenho interesse</button>
-            </div>
-          </article>
-          <article class="treatment-card" data-category="injetaveis facial">
-            <img src="assets/clinica-recepcao.jpg" alt="Recepção acolhedora da Eclair Beauty" />
-            <div>
-              <p>Rejuvenescimento</p>
-              <h3>Bioestimulador e harmonização</h3>
-              <span>Planejamento para estrutura, viço, firmeza e rejuvenescimento com elegância.</span>
-              <button type="button" data-procedure="Bioestimulador e harmonização">Tenho interesse</button>
-            </div>
-          </article>
+          <button class="filter" type="button" data-filter="injetavel">Injetável</button>
+          <button class="filter" type="button" data-filter="relaxante">Relaxante</button>
         </div>
 
         <div class="protocol-heading">
           <p class="eyebrow">Protocolos Eclair</p>
-          <h3>Todos os tratamentos em formato claro, visual e direto.</h3>
+          <h3>Deslize para conhecer os procedimentos.</h3>
         </div>
 
-        <div class="protocol-grid" aria-label="Protocolos e procedimentos">
-          <article class="protocol-card" data-category="corporal tecnologia">
+        <div class="protocol-carousel">
+          <button class="carousel-button carousel-prev" type="button" data-carousel-prev aria-label="Ver protocolos anteriores">‹</button>
+          <div class="protocol-track" data-protocol-track aria-label="Protocolos e procedimentos">
+          <article class="protocol-card" data-category="corporal">
             <img src="assets/protocolo-corporal-premium.png" alt="Tecnologia corporal em ambiente premium" />
             <div>
               <p>Corporal</p>
@@ -188,7 +133,7 @@
               <button type="button" data-procedure="Aplicação de enzimas">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="corporal tecnologia">
+          <article class="protocol-card" data-category="corporal">
             <img src="assets/protocolo-corporal-premium.png" alt="Equipamento corporal estético" />
             <div>
               <p>Corporal</p>
@@ -197,7 +142,7 @@
               <button type="button" data-procedure="Hidrolipoclasia">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="corporal tecnologia">
+          <article class="protocol-card" data-category="corporal">
             <img src="assets/sala-clinica.jpg" alt="Sala de estética Eclair" />
             <div>
               <p>Tecnologia</p>
@@ -215,7 +160,7 @@
               <button type="button" data-procedure="Criofrequência">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="facial corporal tecnologia">
+          <article class="protocol-card" data-category="facial corporal">
             <img src="assets/protocolo-facial-premium.png" alt="Tratamento facial premium" />
             <div>
               <p>Tecnologia</p>
@@ -224,7 +169,7 @@
               <button type="button" data-procedure="Radiofrequência">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="corporal">
+          <article class="protocol-card" data-category="corporal relaxante">
             <img src="assets/clinica-recepcao.jpg" alt="Ambiente acolhedor Eclair" />
             <div>
               <p>Bem-estar</p>
@@ -233,7 +178,7 @@
               <button type="button" data-procedure="Drenagem linfática">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="corporal">
+          <article class="protocol-card" data-category="corporal relaxante">
             <img src="assets/protocolo-corporal-premium.png" alt="Massagem corporal estética" />
             <div>
               <p>Modelagem</p>
@@ -242,7 +187,7 @@
               <button type="button" data-procedure="Massagem modeladora">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="corporal tecnologia">
+          <article class="protocol-card" data-category="corporal">
             <img src="assets/sala-clinica.jpg" alt="Sala equipada para procedimentos" />
             <div>
               <p>Corporal</p>
@@ -260,7 +205,7 @@
               <button type="button" data-procedure="Detox">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="corporal tecnologia">
+          <article class="protocol-card" data-category="corporal">
             <img src="assets/protocolo-corporal-premium.png" alt="Tecnologia estética corporal" />
             <div>
               <p>Tecnologia</p>
@@ -287,7 +232,7 @@
               <button type="button" data-procedure="Pump up e Gluteomax">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="corporal tecnologia">
+          <article class="protocol-card" data-category="corporal">
             <img src="assets/sala-clinica.jpg" alt="Ambiente de tecnologia estética" />
             <div>
               <p>Tecnologia</p>
@@ -314,7 +259,7 @@
               <button type="button" data-procedure="Drenagem facial">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="facial tecnologia">
+          <article class="protocol-card" data-category="facial">
             <img src="assets/procedimento-facial.jpg" alt="Atendimento facial Eclair" />
             <div>
               <p>Facial</p>
@@ -323,7 +268,7 @@
               <button type="button" data-procedure="Lifting facial">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="facial tecnologia">
+          <article class="protocol-card" data-category="facial">
             <img src="assets/protocolo-facial-premium.png" alt="Peeling facial em ambiente elegante" />
             <div>
               <p>Pele</p>
@@ -332,7 +277,7 @@
               <button type="button" data-procedure="Peelings">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="injetaveis facial">
+          <article class="protocol-card" data-category="injetavel facial">
             <img src="assets/protocolo-avaliacao-premium.png" alt="Planejamento facial natural" />
             <div>
               <p>Injetáveis</p>
@@ -341,7 +286,7 @@
               <button type="button" data-procedure="Botox">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="injetaveis facial">
+          <article class="protocol-card" data-category="injetavel facial">
             <img src="assets/protocolo-avaliacao-premium.png" alt="Avaliação facial personalizada" />
             <div>
               <p>Injetáveis</p>
@@ -350,7 +295,7 @@
               <button type="button" data-procedure="Preenchimento">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="injetaveis facial">
+          <article class="protocol-card" data-category="injetavel facial">
             <img src="assets/protocolo-facial-premium.png" alt="Cuidado facial para colágeno" />
             <div>
               <p>Rejuvenescimento</p>
@@ -359,7 +304,7 @@
               <button type="button" data-procedure="Bioestimulador de colágeno">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="facial injetaveis">
+          <article class="protocol-card" data-category="facial injetavel">
             <img src="assets/protocolo-facial-premium.png" alt="Pele com viço e cuidado natural" />
             <div>
               <p>Glow</p>
@@ -368,7 +313,7 @@
               <button type="button" data-procedure="Skinbooster">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="facial tecnologia">
+          <article class="protocol-card" data-category="facial">
             <img src="assets/procedimento-facial.jpg" alt="Protocolo facial personalizado" />
             <div>
               <p>Pele</p>
@@ -377,7 +322,7 @@
               <button type="button" data-procedure="Microagulhamento">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="facial tecnologia">
+          <article class="protocol-card" data-category="facial">
             <img src="assets/sala-clinica.jpg" alt="Tecnologia facial Eclair" />
             <div>
               <p>Tecnologia</p>
@@ -386,7 +331,7 @@
               <button type="button" data-procedure="Laser Lavieen">Tenho interesse</button>
             </div>
           </article>
-          <article class="protocol-card" data-category="facial tecnologia">
+          <article class="protocol-card" data-category="facial">
             <img src="assets/protocolo-facial-premium.png" alt="Tratamento para manchas e textura" />
             <div>
               <p>Pele</p>
@@ -395,6 +340,8 @@
               <button type="button" data-procedure="Tratamento para manchas">Tenho interesse</button>
             </div>
           </article>
+          </div>
+          <button class="carousel-button carousel-next" type="button" data-carousel-next aria-label="Ver próximos protocolos">›</button>
         </div>
       </section>
 

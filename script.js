@@ -17,6 +17,7 @@ document.querySelectorAll("[data-procedure]").forEach((button) => {
 
 const filters = document.querySelectorAll("[data-filter]");
 const cards = document.querySelectorAll("[data-category]");
+const protocolTrack = document.querySelector("[data-protocol-track]");
 
 filters.forEach((filter) => {
   filter.addEventListener("click", () => {
@@ -26,7 +27,16 @@ filters.forEach((filter) => {
       const show = selected === "todos" || card.dataset.category.includes(selected);
       card.hidden = !show;
     });
+    protocolTrack?.scrollTo({ left: 0, behavior: "smooth" });
   });
+});
+
+document.querySelector("[data-carousel-prev]")?.addEventListener("click", () => {
+  protocolTrack?.scrollBy({ left: -(protocolTrack.clientWidth * 0.82), behavior: "smooth" });
+});
+
+document.querySelector("[data-carousel-next]")?.addEventListener("click", () => {
+  protocolTrack?.scrollBy({ left: protocolTrack.clientWidth * 0.82, behavior: "smooth" });
 });
 
 const form = document.querySelector("[data-form]");

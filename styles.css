@@ -297,79 +297,70 @@ h3 {
   color: var(--white);
 }
 
-.treatment-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.treatment-card {
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--white);
-  min-height: 100%;
-  box-shadow: 0 12px 30px rgba(77, 50, 43, 0.06);
-}
-
-.treatment-card[hidden] {
-  display: none;
-}
-
-.treatment-card img {
-  width: 100%;
-  aspect-ratio: 1.25 / 1;
-  object-fit: cover;
-}
-
-.treatment-card div {
-  padding: 22px;
-}
-
-.treatment-card p {
-  margin-bottom: 8px;
-  color: var(--rose-dark);
-  font-size: 0.78rem;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.treatment-card span {
-  display: block;
-  min-height: 76px;
-  color: var(--muted);
-}
-
-.treatment-card button {
-  width: 100%;
-  min-height: 44px;
-  margin-top: 18px;
-  border: 1px solid var(--ink);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--ink);
-  cursor: pointer;
-  font: inherit;
-  font-weight: 800;
-}
-
 .protocol-heading {
   max-width: 760px;
-  margin-top: 42px;
+  margin-top: 32px;
 }
 
 .protocol-heading h3 {
   margin-bottom: 22px;
 }
 
-.protocol-grid {
+.protocol-carousel {
+  position: relative;
+}
+
+.protocol-track {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(330px, 31vw);
   gap: 18px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2px 0 18px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.protocol-track::-webkit-scrollbar {
+  height: 9px;
+}
+
+.protocol-track::-webkit-scrollbar-thumb {
+  background: rgba(122, 64, 61, 0.24);
+  border-radius: 999px;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 250, 246, 0.94);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-size: 2rem;
+  line-height: 1;
+  box-shadow: 0 14px 34px rgba(77, 50, 43, 0.14);
+}
+
+.carousel-prev {
+  left: 8px;
+}
+
+.carousel-next {
+  right: 8px;
 }
 
 .protocol-card {
   overflow: hidden;
+  scroll-snap-align: start;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--white);
@@ -383,7 +374,7 @@ h3 {
 
 .protocol-card img {
   width: 100%;
-  aspect-ratio: 1 / 0.86;
+  aspect-ratio: 1.12 / 1;
   object-fit: cover;
 }
 
@@ -659,11 +650,13 @@ select {
     min-height: auto;
   }
 
-  .treatment-grid,
   .intro-grid,
-  .protocol-grid,
   .review-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .protocol-track {
+    grid-auto-columns: minmax(310px, 54vw);
   }
 }
 
@@ -698,16 +691,21 @@ select {
   }
 
   .proof-strip,
-  .treatment-grid,
   .intro-grid,
   .team-grid,
-  .protocol-grid,
   .review-grid,
   .footer {
     grid-template-columns: 1fr;
   }
 
-  .treatment-card span,
+  .protocol-track {
+    grid-auto-columns: minmax(282px, 86vw);
+  }
+
+  .carousel-button {
+    display: none;
+  }
+
   .protocol-card span,
   .protocol-card h3 {
     min-height: auto;
