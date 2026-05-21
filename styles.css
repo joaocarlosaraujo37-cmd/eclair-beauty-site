@@ -502,6 +502,24 @@ h3 {
   border-radius: var(--radius);
 }
 
+.room-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.room-gallery img {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1.1 / 1;
+  object-fit: cover;
+  object-position: center 54%;
+  border-radius: var(--radius);
+  filter: saturate(0.94) contrast(0.98) brightness(1.02);
+}
+
 .experience-copy {
   max-width: 650px;
 }
@@ -926,6 +944,10 @@ select {
   .hero-media img,
   .experience-media img {
     min-height: 320px;
+  }
+
+  .room-gallery img {
+    min-height: 0;
   }
 
   .proof-strip,
