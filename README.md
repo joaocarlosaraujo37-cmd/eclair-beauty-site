@@ -11,6 +11,15 @@ Site institucional estático pronto para publicação na Vercel.
 5. Output directory: deixe vazio ou use `.`.
 6. Deploy.
 
+## Configuração Vercel
+
+- Project name: `eclair-beauty-site`
+- Framework preset: `Other`
+- Build command: vazio
+- Install command: vazio
+- Output directory: `.`
+- Root directory: raiz do repositório
+
 ## Contato configurado
 
 - WhatsApp: (11) 92093-5904
