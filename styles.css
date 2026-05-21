@@ -553,6 +553,15 @@ h3 {
   height: 100%;
   min-height: 330px;
   object-fit: cover;
+  filter: saturate(0.92) contrast(0.98) brightness(1.03);
+}
+
+.team-photo-talita {
+  object-position: center 30%;
+}
+
+.team-photo-ana {
+  object-position: center 24%;
 }
 
 .team-card div {
