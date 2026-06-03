@@ -382,9 +382,9 @@ h3 {
   left: 12px;
   right: 12px;
   z-index: 2;
-  height: min(54%, 180px);
-  background: url("assets/logo-eclair-oficial-clean.png") center center / min(58%, 220px) auto no-repeat;
-  opacity: 0.16;
+  height: min(48%, 160px);
+  background: url("assets/logo-eclair-oficial-clean.png") center center / min(52%, 190px) auto no-repeat;
+  opacity: 0.1;
   filter: drop-shadow(0 1px 3px rgba(255, 250, 246, 0.28));
   mix-blend-mode: multiply;
   pointer-events: none;
