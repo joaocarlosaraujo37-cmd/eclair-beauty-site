@@ -375,7 +375,7 @@ h3 {
   display: none;
 }
 
-.protocol-card::before {
+.protocol-card.has-generated-logo::before {
   content: "";
   position: absolute;
   top: 18px;
