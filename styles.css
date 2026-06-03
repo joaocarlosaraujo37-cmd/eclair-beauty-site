@@ -375,17 +375,18 @@ h3 {
   display: none;
 }
 
-.protocol-card.has-generated-logo::before {
+.protocol-card.has-watermark::before {
   content: "";
   position: absolute;
-  top: 18px;
-  left: 18px;
+  top: 12px;
+  left: 12px;
+  right: 12px;
   z-index: 2;
-  width: clamp(98px, 9vw, 136px);
-  height: 58px;
-  background: url("assets/logo-eclair-oficial-clean.png") left center / contain no-repeat;
-  opacity: 0.9;
-  filter: drop-shadow(0 2px 8px rgba(255, 250, 246, 0.72));
+  height: min(54%, 180px);
+  background: url("assets/logo-eclair-oficial-clean.png") center center / min(58%, 220px) auto no-repeat;
+  opacity: 0.16;
+  filter: drop-shadow(0 1px 3px rgba(255, 250, 246, 0.28));
+  mix-blend-mode: multiply;
   pointer-events: none;
 }
 
